@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.get("/dashboard", auth.verifyToken , (req,res) => {
+router.get("/api/dashboard", auth.verifyToken , (req,res) => {
   console.log(req.user);
   res.json({access: "protected resource"})
 })
